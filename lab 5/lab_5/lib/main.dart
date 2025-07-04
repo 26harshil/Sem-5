@@ -1,4 +1,4 @@
-import 'package:lab_5/middleware/middleware.dart';
+import 'package:lab_5/Game/game.dart';
 import 'package:lab_5/utiles/import_export.dart';
 
 void main() {
@@ -16,22 +16,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+      home: AirHockeyApp(),
 
-      initialRoute: '/hi-page',
-      getPages: [
-        GetPage(
-          name: '/hi-page',
-          page: () => HiScreen(),
-          transition: Transition.fade,
-        ),
-        GetPage(
-          name: '/bye-page',
-          page: () => ByeScreen(),
-          middlewares: [Middleware()],
-          transition: Transition.circularReveal,
-          transitionDuration: Duration(seconds: 1),
-        ),
-      ],
+      // initialRoute: '/hi-page',
+      // getPages: [
+      //   GetPage(
+      //     name: '/hi-page',
+      //     page: () => HiScreen(),
+      //     transition: Transition.fade,
+      //   ),
+      //   GetPage(
+      //     name: '/bye-page',
+      //     page: () => ByeScreen(),
+      //     middlewares: [Middleware()],
+      //     transition: Transition.circularReveal,
+      //     transitionDuration: Duration(seconds: 1),
+      //   ),
     );
   }
 }

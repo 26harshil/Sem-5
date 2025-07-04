@@ -1,0 +1,53 @@
+CREATE TABLE users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    age INT NOT NULL,
+    total_points INT DEFAULT 0
+);
+CREATE TABLE animal_questions (
+    question_id INT PRIMARY KEY AUTO_INCREMENT,
+    animal_name VARCHAR(50) NOT NULL,
+    image_url VARCHAR(255),
+    fun_fact TEXT,
+    option_1 VARCHAR(100),
+    option_2 VARCHAR(100),
+    option_3 VARCHAR(100),
+    option_4 VARCHAR(100),
+    correct_option TINYINT NOT NULL -- Values: 1 to 4
+);
+CREATE TABLE color_questions (
+    question_id INT PRIMARY KEY AUTO_INCREMENT,
+    color_name VARCHAR(50) NOT NULL,
+    hex_code VARCHAR(7),
+    option_1 VARCHAR(100),
+    option_2 VARCHAR(100),
+    option_3 VARCHAR(100),
+    option_4 VARCHAR(100),
+    correct_option TINYINT NOT NULL -- Values: 1 to 4
+);
+CREATE TABLE vehicle_questions (
+    question_id INT PRIMARY KEY AUTO_INCREMENT,
+    vehicle_name VARCHAR(50) NOT NULL,
+    image_url VARCHAR(255),
+    option_1 VARCHAR(100),
+    option_2 VARCHAR(100),
+    option_3 VARCHAR(100),
+    option_4 VARCHAR(100),
+    correct_option TINYINT NOT NULL -- Values: 1 to 4
+);
+CREATE TABLE history_info (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  period TEXT,             -- e.g., "Ancient", "Medieval", "Modern"
+  story TEXT NOT NULL,     -- Full description or story
+  image_url TEXT,          -- Optional image
+  source TEXT              -- Optional reference or author
+);
+CREATE TABLE user_progress (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INT,
+  module TEXT,           -- 'animals', 'colors', 'vehicles'
+  total_questions INT DEFAULT 0,
+  correct_answers INT DEFAULT 0,
+  completed INT DEFAULT 0   -- 0 = incomplete, 1 = completed
+);
