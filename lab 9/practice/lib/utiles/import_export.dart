@@ -1,0 +1,11 @@
+export 'package:path/path.dart';
+export 'package:sqflite/sqflite.dart';
+export 'package:flutter/material.dart';
+export 'package:get/get_navigation/src/root/get_material_app.dart';
+export 'package:practice/screens/student_list.dart';
+export 'package:practice/utiles/string_const.dart';
+export 'package:get/get_rx/get_rx.dart';
+export 'package:get/get_core/src/get_main.dart';
+export 'package:practice/controller/student_controller.dart';
+export 'package:get/get.dart';
+export 'package:practice/screens/add_edit_student.dart';

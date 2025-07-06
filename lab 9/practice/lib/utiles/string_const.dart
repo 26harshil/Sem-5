@@ -1,0 +1,9 @@
+const String COLUMN_ID = 'student_id';
+const String COLUMN_NAME = 'name';
+const String COLUMN_EMAIL = 'email';
+const String COLUMN_DOB = 'dob';
+const String COLUMN_GENDER = 'gender';
+const String COLUMN_ENROLLMENT_YEAR = 'enrollment_year';
+const String COLUMN_BRANCH_ID = 'branch_id';
+const String COLUMN_UNIVERSITY_ID = 'university_id';
+const String TBL_STUDENT = "Student";
